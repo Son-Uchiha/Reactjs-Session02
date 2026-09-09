@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Bai01 from "./exercises/Bai01";
 import Bai02 from "./exercises/Bai02";
+import Bai03 from "./exercises/Bai03";
 
 export default function App() {
-  const [currentBai, setCurrentBai] = useState(2); // Mặc định mở bài 2 để bạn kiểm tra
+  const [currentBai, setCurrentBai] = useState(3); // Mặc định mở bài 3 để bạn kiểm tra
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -33,9 +34,10 @@ export default function App() {
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 min-h-[250px]">
           {currentBai === 1 && <Bai01 />}
           {currentBai === 2 && <Bai02 />}
-          {currentBai > 2 && (
+          {currentBai === 3 && <Bai03 />}
+          {currentBai > 3 && (
             <p className="text-center text-gray-400 py-12">
-              Bài {currentBai} chưa làm. Hãy chọn Bài 1 hoặc Bài 2 nhé!
+              Bài {currentBai} chưa làm. Hãy chọn Bài 1, 2 hoặc 3 nhé!
             </p>
           )}
         </div>
