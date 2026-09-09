@@ -6,9 +6,10 @@ import Bai04 from "./exercises/Bai04";
 import Bai06 from "./exercises/Bai06";
 import Bai07 from "./exercises/Bai07";
 import Bai09 from "./exercises/Bai09";
+import Bai10 from "./exercises/Bai10";
 
 export default function App() {
-  const [currentBai, setCurrentBai] = useState(9); // Mặc định mở bài 9 để bạn kiểm tra
+  const [currentBai, setCurrentBai] = useState(10); // Mặc định mở bài 10 để bạn kiểm tra
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -43,9 +44,10 @@ export default function App() {
           {currentBai === 6 && <Bai06 />}
           {currentBai === 7 && <Bai07 />}
           {currentBai === 9 && <Bai09 />}
-          {(currentBai === 5 || currentBai === 8 || currentBai === 10) && (
+          {currentBai === 10 && <Bai10 />}
+          {(currentBai === 5 || currentBai === 8) && (
             <p className="text-center text-gray-400 py-12">
-              Bài {currentBai} chưa làm. Hãy chọn các bài đã làm (1, 2, 3, 4, 6, 7, 9) nhé!
+              Bài {currentBai} chưa làm. Hãy chọn các bài đã làm (1, 2, 3, 4, 6, 7, 9, 10) nhé!
             </p>
           )}
         </div>
